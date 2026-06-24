@@ -1,0 +1,360 @@
+/*******************************************************************************
+ * * 01. SEÇÃO: HOME / RESET
+ * *******************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Black Ops One", system-ui;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d0e12;
+    /* Corresponde à var(--escuro-3-quase-preto) */
+    color: #ffffff;
+    padding-top: 70px;
+
+
+}
+
+/*******************************************************************************
+ * * 01. SEÇÃO: HOME / CORES USADAS NO PROJETO
+ * *******************************************************************************/
+:root {
+    /* --- SEQUÊNCIA DE 4 CORES ESCURAS --- */
+    --escuro-1-cards: #24252d;
+    --escuro-2-fundo: #16171d;
+    --escuro-3-quase-preto: #0d0e12;
+    --escuro-4-preto-puro: #000000;
+
+    /* --- OS DOIS TONS DE ROXO --- */
+    --roxo-medio: #7c3aed;
+    --roxo-escuro: #4c1d95;
+
+    /* --- BASE PARA O EFEITO VIDRO --- */
+    --cor-vidro: rgba(255, 255, 255, 0.03);
+    --borda-vidro: rgba(255, 255, 255, 0.08);
+}
+
+/*******************************************************************************
+ * * 01. SEÇÃO: HOME / SEÇÃO MENU
+ * *******************************************************************************/
+.menu {
+    background-color: rgb(16, 16, 16);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização dos Links */
+.menu ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 20px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+/* Efeito Hover - Passar o mouse muda para o roxo claro */
+.menu ul li a:hover {
+    background-color: #2b2b2b;
+    color: #9158f3;
+}
+
+/* Efeito Interativo de Clique (Active) - Fundo Roxo */
+.menu ul li a:active {
+    background-color: var(--roxo-medio);
+    color: #ffffff;
+    transform: scale(0.96);
+}
+
+.menu-imagem {
+    width: 100px;
+}
+
+.menu-imagem2 {
+    width: 100px;
+}
+
+/*******************************************************************************
+ * * 01. SEÇÃO: HOME / SEÇÃO PRINCIPAL
+ * *******************************************************************************/
+.principal {
+    min-height: calc(100vh - 70px);
+    /* Desconta a altura do menu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    margin-top: 13px;
+}
+
+.foto-perfil {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.4) 0px 15px 12px;
+    border: 4px solid black;
+    object-fit: cover;
+    transform: rotate(-5deg);
+}
+
+h1 {
+    font-size: clamp(2.4rem, 5vw, 5.5rem);
+    font-weight: bold;
+    margin: 40px;
+    text-align: center;
+}
+
+.principal-paragrafo-hover {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: aliceblue;
+    font-weight: 600;
+    cursor: default;
+    transition: color 0.3s ease;
+}
+
+.principal-paragrafo-hover:hover {
+    color: var(--roxo-medio);
+}
+
+/*******************************************************************************
+ * * 02. SEÇÃO: / SEÇÃO SOBRE MIM
+ * *******************************************************************************/
+.sobre {
+    min-height: calc(100vh - 70px);
+    padding: 6rem 2rem;
+}
+
+.sobre-titulo {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sobre-caixa {
+    padding: 2.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--borda-vidro);
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+    background: var(--escuro-2-fundo);
+}
+
+.sobre-paragrafo {
+    font-size: 1.1rem;   
+    line-height: 1.7;          
+    letter-spacing: 0.5px;      
+    text-align: justify;
+}
+/*******************************************************************************
+ * * 03. SEÇÃO: / SEÇÃO HABILIDADES
+ * *******************************************************************************/
+.habilidades {
+    min-height: calc(100vh - 70px);
+    padding-top: 1rem;
+
+}
+
+.habilidades-titulo {
+    margin: 10px;
+    text-align: center;
+    font-size: 2.9rem;
+
+}
+
+.habilidades-caixa {
+
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.habilidades-card {
+
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    margin: 50px;
+    background-color: white;
+
+}
+
+.habilidades-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(124, 58, 237, 0.25);
+    /* Seu brilho roxo */
+}
+
+.habilidades-imagem {
+
+    width: 100%;
+}
+
+.habilidades-imagem-javascript {
+
+    width: 90%;
+}
+
+.habilidades-paragrafo {
+    margin: 15px 0;
+    color: aliceblue;
+    line-height: 1.5rem;
+}
+
+/*******************************************************************************
+ * * 04. SEÇÃO: / SEÇÃO PROJETOS
+ * *******************************************************************************/
+.projetos { 
+
+    min-height: calc(100vh - 70px);
+    margin: auto;
+}
+
+.projetos-titulo {
+
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2.9rem;
+}
+
+.projetos-caixa {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 0 200px;
+    width: 80%;
+    height: 450px;
+    gap: 16px;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+
+.imagem-projeto {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 14%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 13px;
+    border: 5px solid rgb(69, 65, 65);
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1); /* Seu efeito de zoom sutil */ 
+}
+
+.imagem-projeto:hover {
+    width: 25%;            /* Expande a largura */
+    
+}
+
+/*******************************************************************************
+ * * 05. SEÇÃO: / SEÇÃO CONTATO
+ * *******************************************************************************/
+.contatos {
+
+    padding: 6rem 2rem;
+    min-height: calc(100vh - 70px);
+
+}
+
+.contatos-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+
+}
+
+.formulario-contato {
+
+    max-width: 600px;
+    margin: 0 auto;
+    background: #2b2b2c;
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--borda-vidro);
+    border-radius: 20px;
+
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+
+}
+
+.campo-form {
+
+    width: 100%;
+    font-size: 1rem;
+    padding: 15px;
+    background-color: #000000;
+    border-radius: 10px;
+    color: rgb(107, 108, 109);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    outline: none;
+
+    transition: border-color 0.3s ease, box-shadow 0.3s ease
+}
+
+.campo-form:focus {
+    outline: none;
+    border-color: var(--roxo-medio);
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.6),
+        0 0 20px rgba(124, 58, 237, 0.3);
+}
+
+.botao-form {
+
+    color: white;
+    font-size: 2rem;
+    background: #000000;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5 ease;
+}
+
+.botao-form:hover {
+
+    transform: translate(-3px);
+    box-shadow: rgba(52, 32, 32, 0.56) 0px 22px 70px 4px;
+}
+
+/*******************************************************************************
+ * * 05. SEÇÃO: / SEÇÃO FOOTER
+ * *******************************************************************************/
+
+.rodape {
+
+    display: flex;
+    justify-content: left;
+    padding: 25px;
+}

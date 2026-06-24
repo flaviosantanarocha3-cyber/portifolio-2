@@ -1,0 +1,195 @@
+               /* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   Funciona como uma condição: se a tela mudar de tamanho, o CSS muda junto.
+   - max-width: Aplica o estilo em telas ATÉ o tamanho definido (ex: celulares).
+   - min-width: Aplica o estilo em telas A PARTIR do tamanho definido (ex: PCs).
+   ========================================================================== */
+@media (max-width: 480px) { 
+
+    * {
+
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+    }
+    /* 1. Muda o alinhamento de horizontal para vertical de forma fluida */
+    .menu ul {
+
+        flex-direction: column;
+        width: 100%;
+        padding: 5px;
+
+    }
+    /* 2. Força cada item da lista a ocupar o espaço disponível sem vazar */
+    .menu ul li {
+        width: 50%;
+    }
+    /* 3. Ajusta os links para serem flexíveis e fáceis de tocar */
+    .menu ul li a {
+        padding: 3px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        /* IMPRESCINDÍVEL: impede que o padding de 20px estoure os 100% de largura */
+        text-align: center;
+    }
+    /* 4. Torna as imagens do GitHub e LinkedIn totalmente responsivas */
+    .menu-imagem,
+    .menu-imagem2 {
+        width: 40%;
+        /* Estica para ocupar toda a largura do menu */
+        height: 40px;
+
+    }
+    /* ==========================================
+       SEÇÃO PRINCIPAL (CELULAR)
+    ============================================= */
+    .principal {
+
+        padding-left: 1.2rem;
+        /* Reduz levemente o respiro lateral para ganhar espaço */
+        padding-right: 1.2rem;
+        min-height: auto;
+        /* No celular, deixa a altura livre para o conteúdo respirar */
+    }
+
+    .foto-perfil {
+
+        width: 70%;
+        max-width: 320px;
+        /* Tamanho ideal para o iPhone 14 Pro Max */
+        margin-top: 210px;
+    }
+
+    h1 {
+        /* 3. Zera as margens das laterais para o seu nome não quebrar letra por letra */
+        margin: 25px 0;
+        line-height: 1.2;
+        font-size: 40px;
+
+    }
+
+    .principal-paragrafo-hover {
+
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    /* ==========================================
+       SEÇÃO HABILIDADES (CELULAR)
+    ============================================= */
+    .habilidades {
+        min-height: auto;
+        /* Deixa a altura livre para crescer conforme os cards quebram linha */
+        padding: 30px 15px;
+    }
+
+    .habilidades-titulo {
+        font-size: 2rem;
+        /* Reduz o título para combinar com a tela do celular */
+        margin: 20px 0;
+    }
+
+    .habilidades-caixa {
+        display: flex;
+        flex-direction: row;
+        /* Mantém o alinhamento de linha... */
+        flex-wrap: wrap;
+        /* ...mas PERMITE que os cards caiam para a linha de baixo! */
+        justify-content: center;
+        /* Centraliza os blocos na tela */
+        gap: 16px;
+        /* Cria uma separação perfeita e idêntica entre os cards */
+        padding: 5px;
+    }
+
+    .habilidades-card {
+        /* Reduzimos levemente para 135px para garantir que caibam dois até em celulares menores (como iPhone SE) */
+        width: 135px;
+        height: 135px;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    /* ==========================================
+       SEÇÃO PROJETOS (CELULAR)
+    ============================================= */
+    .projetos {
+        min-height: auto;
+        padding-bottom: 50px;
+    }
+    .projetos-titulo {
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+
+    .projetos-caixa {
+        display: flex;
+        flex-direction: column; /* 1. Força os projetos a ficarem um embaixo do outro */
+        margin: 30px auto 0 auto;
+        width: 90%;   /* Ocupa quase a tela toda, deixando um respiro nas bordas */
+        height: auto;  /* 3. Liberta a altura para os projetos poderem se empilhar sem sumir */
+        overflow: visible;
+        box-shadow: none;
+        /* Remove a sombra da caixa mãe para aplicar nas fotos individuais */
+        gap: 25px;
+        /* Dá um espaço elegante entre um projeto e outro */
+    }
+
+    .imagem-projeto {
+        /* 4. Faz a foto do projeto ocupar toda a largura disponível para o recrutador ver bem */
+        width: 100% !important;
+        height: 220px;
+        /* Remove o scale do desktop que poderia embaçar a foto no celular */
+        transform: scale(1);
+        /* Adiciona a sombra direto em cada foto individualmente */
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 5. Desativa o efeito de esticar para os lados do computador*/
+    .imagem-projeto:hover {
+        width: 100% !important;
+    }
+
+    /* ==========================================
+       SEÇÃO CONTATOS (CELULAR)
+    ============================================= */
+    .contatos-titulo {
+        /* Mantém a consistência visual com os outros títulos que ajustamos */
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .formulario-contato {
+        /* Diminui o recuo interno para os campos ganharem mais largura útil */
+        padding: 1.5rem;
+        border-radius: 16px;
+        /* Suaviza as bordas para telas menores */
+    }
+
+    .campo-form {
+
+        box-sizing: border-box;
+        font-size: 0.95rem;
+        /* Evita que o zoom automático do teclado do celular quebre o layout */
+    }
+
+    .botao-form {
+        /* Reduz o texto de 2rem para um tamanho padrão de botão mobile, mantendo o Bold */
+        font-size: 1.3rem;
+        padding: 0.8rem 1.5rem;
+        /* Deixa o botão imponente e confortável para o clique */
+        border-radius: 10px;
+    }
+
+
+    .rodape {
+        font-size: 10px;
+        display: flex;
+        justify-content: left;
+        padding: 5px;
+        margin-top: 10px;
+
+    }
+}

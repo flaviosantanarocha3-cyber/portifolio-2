@@ -117,18 +117,26 @@ body {
  * * 01. SEÇÃO: HOME / SEÇÃO PRINCIPAL
  * *******************************************************************************/
 .principal {
-    min-height: calc(100vh - 70px);
-    /* Desconta a altura do menu */
+
+    /* Removemos o calc complicado e definimos a altura total da tela */
+    min-height: 100vh; 
+    
+    /* CRIAMOS UM ESPAÇO NO TOPO EXCLUSIVO PARA O MENU NÃO ATROPELAR A FOTO */
+    padding-top: 100px; 
+    
+    /* Mantemos os paddings das laterais e da parte inferior */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem;
-    margin-top: 13px;
 }
 
 .foto-perfil {
-    width: 90%;
+    width: 80%;
     max-width: 400px;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.4) 0px 15px 12px;
@@ -209,10 +217,11 @@ h1 {
 
 .habilidades-caixa {
 
-    padding: 10px;
+    padding: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center; /* Centraliza os cards na tela */
+    flex-wrap: wrap
 
 }
 
@@ -220,9 +229,12 @@ h1 {
     width: 150px;
     height: 150px;
     padding: 10px;
-    margin: 70px;
+    margin: 20px;            /* Reduzido de 70px para 20px para respirar melhor */
     background-color: white;
     transition: box-shadow 0.3s ease;
+    display: flex;           /* Garante a centralização do ícone */
+    justify-content: center;
+    align-items: center;
 }
 
 .habilidades-card:hover {
@@ -244,11 +256,15 @@ h1 {
 .habilidades-imagem {
 
     width: 100%;
+    height: 100%;          /* Ocupa o espaço interno do card */
+    object-fit: contain;
 }
 
 .habilidades-imagem-javascript {
 
     width: 90%;
+    height: 90%;           /* Ocupa o espaço interno proporcional */
+    object-fit: contain;
 }
 
 .habilidades-paragrafo {
@@ -276,12 +292,12 @@ h1 {
 .projetos-caixa {
     display: flex;
     justify-content: center;
-    margin: 100px 0 0 200px;
-    width: 80%;
+    margin: 100px;
+    width: 85%;
     height: 450px;
     gap: 16px;
     overflow: hidden;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
 }
 
 .imagem-projeto {
@@ -290,19 +306,23 @@ h1 {
     justify-content: center;
     align-items: center;
 
-    width: 14%;
-    height: 80%;
+    width: 15%;
+    height: 70%;
     object-fit: cover;
+    padding: 5px auto 5px auto;
+
     border-radius: 13px;
     border: 5px solid rgb(69, 65, 65);
     transition: all 0.5s ease-in-out;
     transform: scale(1.1);
-    /* Seu efeito de zoom sutil */
+    margin: 100px auto 0 auto;
+
 }
 
 .imagem-projeto:hover {
-    width: 19%;
-    /* Expande a largura */
+    width: 70%;
+    height: 70%;         
+    object-fit: cover;
 
 }
 

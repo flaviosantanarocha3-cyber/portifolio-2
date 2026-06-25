@@ -217,7 +217,7 @@ h1 {
 
 .habilidades-caixa {
 
-    padding: 50px;
+    padding: px;
     display: flex;
     flex-direction: row;
     justify-content: center; /* Centraliza os cards na tela */

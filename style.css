@@ -11,6 +11,27 @@
 
 html {
     scroll-behavior: smooth;
+
+}
+section {
+
+    scroll-margin-top: 90px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;   /* Alinha os elementos um abaixo do outro (Título, depois Texto) */
+    justify-content: center;  /* Centraliza verticalmente (não deixa colado nem no teto nem no chão) */
+    align-items: center;      /* Centraliza horizontalmente (meio da tela) */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    
+    /* 4. SEGURANÇA */
+    box-sizing: border-box;
+    padding: 20px;
+
+
+
+
+
 }
 
 body {
@@ -147,14 +168,14 @@ body {
 }
 
 h1 {
-    font-size: clamp(2.3rem, 5vw, 5.4rem);
+    font-size: 2.9rem;
     font-weight: bold;
-    margin: 55px;
+    margin: 30px;
     text-align: center;
 }
 
 .principal-paragrafo-hover {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-size:30px;
     color: aliceblue;
     font-weight: 600;
     cursor: default;
@@ -175,9 +196,9 @@ h1 {
 
 .sobre-titulo {
 
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: 2.9rem;
     text-align: center;
-    margin-bottom: 80px;
+    margin: 30px;
 }
 
 .sobre-caixa {
@@ -279,23 +300,24 @@ h1 {
 .projetos {
 
     min-height: calc(100vh - 70px);
-    margin: auto;
+
 }
 
 .projetos-titulo {
 
-    margin-top: 10px;
+    
     text-align: center;
     font-size: 2.9rem;
+    margin-top: 10px;
 }
 
 .projetos-caixa {
     display: flex;
     justify-content: center;
-    margin: 100px;
+
     width: 85%;
     height: 450px;
-    gap: 16px;
+    gap: 14px;
     overflow: hidden;
     border-radius: 16px;
 }
@@ -338,7 +360,7 @@ h1 {
 
 .contatos-titulo {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.9rem;
     margin-bottom: 50px;
 
 }

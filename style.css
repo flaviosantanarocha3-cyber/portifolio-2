@@ -157,6 +157,8 @@ body {
 }
 
 .foto-perfil {
+
+    border-radius: 20px;
     width: 80%;
     max-width: 400px;
     height: auto;
@@ -276,8 +278,9 @@ h1 {
 
 .habilidades-imagem {
 
+    border-radius:30px;
     width: 100%;
-    height: 100%;          /* Ocupa o espaço interno do card */
+    height: 100%;     
     object-fit: contain;
 }
 

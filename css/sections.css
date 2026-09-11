@@ -608,7 +608,7 @@ h2 {
 }
 
 .botao-form {
-    background: linear-gradient(135deg, #00f0ff, #9d00ff);
+    background-color: #5a5a5a;
     color: #FFFFFF;
     padding: 1rem 2rem;
     border: none;
@@ -616,9 +616,10 @@ h2 {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .botao-form:hover {
     background-color: #4a4a4a;
+    transform: translateY(-2px);
 }

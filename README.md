@@ -12,7 +12,7 @@ O projeto foi construído utilizando:
 * **HTML5:** Estruturação semântica, organização do conteúdo e acessibilidade.
 * **CSS3:** Estilização moderna, Flexbox, Grid, efeitos visuais e Media Queries para responsividade.
 * **JavaScript:** Utilizado para implementar funcionalidades e interações dinâmicas na interface.
-* **jQuery:** Biblioteca utilizada para implementar o scroll suave animado entre as seções da página, descontando a altura do menu fixo.
+* **jQuery:** Biblioteca utilizada para implementar o scroll suave animado entre as seções da página, descontando a altura do menu fixo. **Hospedada localmente** em `lib/jquery-3.7.1.min.js` (sem dependência de CDN), com fallback automático para o CDN oficial caso o arquivo local não carregue.
 * **GSAP:** Biblioteca de animações utilizada para criar animações fluidas e interativas, proporcionando uma experiência mais dinâmica ao usuário.
 * **Formspree:** Serviço de gerenciamento de formulários que permite receber mensagens enviadas pelo formulário de contato diretamente por e-mail, sem a necessidade de desenvolver um backend próprio.
 
@@ -48,6 +48,9 @@ portfolio/
 │   ├── sections.css
 │   ├── footer.css
 │   └── responsive.css
+│
+├── lib/
+│   └── jquery-3.7.1.min.js
 │
 ├── imagem/
 └── fontes/

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="copyright" content="© 2026 Flavio Santana">
   <title>Flávio Santana | Desenvolvedor Front-end</title>
   <meta name="description"
     content="Portfólio professional de Flávio Santana, desenvolvedor focado em soluções tecnológicas eficientes, IA e ciência da computação. Conheça meus projetos.">
@@ -12,156 +13,283 @@
   <meta name="author" content="Flávio Santana">
   <meta name="robots" content="index, follow">
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css"> <!-- css para responsividade -->
+  <meta property="og:title" content="Flavio Santana | Desenvolvedor Front-end & UI/UX">
+  <meta property="og:description"
+    content="Explore meus projetos recentes, landing pages e soluções web modernas focadas em performance e experiência do usuário.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flaviosantanarocha3-cyber.github.io/portifolio-2/">
+  <meta property="og:image" content="IMAGEM_PREVIEW_DO_PORTFOLIO.png">
+  <meta property="og:site_name" content="Portfólio Flavio Santana">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-  
+  <link rel="stylesheet" href="css/geral.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
 </head>
-<!-- Início da seção de meu -->
 
 <body>
 
-  <div class="particulas"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const btnHamburguer = document.getElementById('btn-hamburguer');
+      const menuLista = document.querySelector('.menu-lista');
+
+      btnHamburguer.addEventListener('click', function () {
+        menuLista.classList.toggle('active');
+      });
+    });
+  </script>
 
   <nav class="menu">
-
-    <button class="botao-hanburguer" id="btn-hanburguer" aria-label="abrir-menu">
-
+    <button class="botao-hamburguer" id="btn-hamburguer" aria-label="abrir-menu">
       <span class="linha-barra"></span>
       <span class="linha-barra"></span>
       <span class="linha-barra"></span>
-
     </button>
-
-    <ul>
-      <li><a href="#inicio">INICIO</a></li>
-      <li><a href="#sobre">SOBRE</a></li>
-      <li><a href="#habilidades">HABILIDADES</a></li>
-      <li><a href="#projetos">PROJETOS</a></li>
-      <li><a href="#contato">CONTATOS</a></li>
-      <li>
-        <a href="https://github.com/flaviosantanarocha3-cyber" target="_blank" rel="noopener noreferrer">
-          <img src="imagem/GitHub-Simbolo-comprimida.webp" alt="logo github" class="menu-imagem">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/flavio-santana-rocha-a2219a414/?skipRedirect=true" target="_blank"
-          rel="noopener noreferrer">
-          <img src="imagem/linkedin-logo-free-download-free-png.webp" alt="logo linkedin" class="menu-imagem2">
-        </a>
-      </li>
+    <ul class="menu-lista">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato"> Entre em Contato</a></li>
     </ul>
   </nav>
+  <main id="container">
+    <!-- ==================== SEÇÃO HERO ==================== -->
+    <section id="inicio" class="secao-hero">
+      <div class="hero-container">
+        <div class="hero-esquerda">
+          <p class="hero-nome-pequeno">Flavio Santana</p>
+          <h1 class="hero-titulo-roxo">DESENVOLVEDOR</h1>
+          <h2 class="hero-titulo-branco">FRONT END</h2>
+          <p class="hero-descricao">DESIGN & CODE </p>
+          <a href="#projetos" class="hero-botao">VER PROJETOS →</a>
+        </div>
+        <div class="hero-direita">
+          <div class="hero-imagem-container">
+            <img src="imagem/foto portifolio-comprimida.webp" alt="Flávio Santana" class="hero-imagem">
+          </div>
+        </div>
+    </section>
+    <!-- ==================== SEÇÃO SOBRE ==================== -->
+    <section id="sobre" class="sobre">
+      <h2 class="secao-titulo">SOBRE MIM</h2>
+      <div class="sobre-caixa">Meu interesse por tecnologia começou cedo, motivado pela curiosidade de entender como os
+        videogames funcionavam. Em 2007, iniciei o curso de Análise de Sistemas, onde tive meu primeiro contato com
+        programação. Embora não tenha concluído a graduação e minha carreira tenha seguido para a área da Educação, a
+        tecnologia sempre permaneceu presente na minha vida.
 
-  <!-- Início da seção principal -->
-  <main id="inicio" class="principal">
-    <img src="imagem/caricatura-comprimida.webp" alt="caricatura-flavio" class="foto-perfil">
-    <h1>FLAVIO SANTANA</h1>
-    <p class="principal-paragrafo-hover">DESENVOLVEDOR FRONT-END.</p>
+        Atualmente, estou direcionando minha carreira para o desenvolvimento e investindo continuamente em
+        cursos e projetos práticos para fortalecer meus conhecimentos. Foi no desenvolvimento Front-end que encontrei
+        minha maior motivação: criar interfaces modernas, intuitivas e funcionais, sempre pensando na melhor experiência
+        para o usuário.
+
+        Minha formação em Pedagogia contribuiu para desenvolver habilidades como comunicação, organização, empatia e
+        aprendizado contínuo, competências que também levo para a área de tecnologia. Além disso, estudo Design
+        para unir desenvolvimento e percepção visual, criando interfaces mais atrativas e bem estruturadas.
+
+        Estou aberto a oportunidades como Desenvolvedor Front-end Júnior, onde possa aplicar meus conhecimentos,
+        aprender
+        com profissionais experientes e contribuir para o desenvolvimento de produtos de qualidade.
+
+        </p>
+      </div>
+    </section>
+    <!-- ==================== SEÇÃO PROJETOS ==================== -->
+    <section id="projetos" class="secao-projetos">
+      <h2 class="projetos-titulo">PROJETOS</h2>
+      <div class="projetos-grid">
+        <div class="projeto-card">
+          <div class="projeto-placeholder">EM BREVE</div>
+          <div class="projeto-conteudo">
+            <h3 class="projeto-nome">Projeto 1</h3>
+            <p class="projeto-descricao">Descrição do projeto em breve.</p>
+            <a href="#" class="btn-one"><span>VER PROJETO</span></a>
+          </div>
+        </div>
+        <div class="projeto-card">
+          <div class="projeto-placeholder">EM BREVE</div>
+          <div class="projeto-conteudo">
+            <h3 class="projeto-nome">Projeto 2</h3>
+            <p class="projeto-descricao">Descrição do projeto em breve.</p>
+            <a href="#" class="btn-one"><span>VER PROJETO</span></a>
+          </div>
+        </div>
+        <div class="projeto-card">
+          <div class="projeto-placeholder">EM BREVE</div>
+          <div class="projeto-conteudo">
+            <h3 class="projeto-nome">Projeto 3</h3>
+            <p class="projeto-descricao">Descrição do projeto em breve.</p>
+            <a href="#" class="btn-one"><span>VER PROJETO</span></a>
+          </div>
+        </div>
+        <div class="projeto-card">
+          <div class="projeto-placeholder">EM BREVE</div>
+          <div class="projeto-conteudo">
+            <h3 class="projeto-nome">Projeto 4</h3>
+            <p class="projeto-descricao">Descrição do projeto em breve.</p>
+            <a href="#" class="btn-one"><span>VER PROJETO</span></a>
+          </div>
+        </div>
+        <div class="projeto-card">
+          <div class="projeto-placeholder">EM BREVE</div>
+          <div class="projeto-conteudo">
+            <h3 class="projeto-nome">Projeto 5</h3>
+            <p class="projeto-descricao">Descrição do projeto em breve.</p>
+            <a href="#" class="btn-one"><span>VER PROJETO</span></a>
+          </div>
+        </div>
+        <div class="projeto-card">
+          <div class="projeto-placeholder">EM BREVE</div>
+          <div class="projeto-conteudo">
+            <h3 class="projeto-nome">Projeto 6</h3>
+            <p class="projeto-descricao">Descrição do projeto em breve.</p>
+            <a href="#" class="btn-one"><span>VER PROJETO</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== SEÇÃO TECNOLOGIAS E HABILIDADES ==================== -->
+    <section id="habilidades" class="secao-tecnologias-processo">
+      <!-- habilidades & ferramentas -->
+      <div class="skills-container">
+        <h2 class="skills-titulo">HABILIDADES & FERRAMENTAS</h2>
+        <div class="skills-lista">
+          <div class="skill-item">
+            <span class="skill-icone">🌐</span>
+            <span class="skill-nome">HTML5</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-icone">🎨</span>
+            <span class="skill-nome">CSS3</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-icone">⚡</span>
+            <span class="skill-nome">JAVASCRIPT</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-icone">☕</span>
+            <span class="skill-nome">JAVA</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-icone">🟢</span>
+            <span class="skill-nome">NODE.JS</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-icone">🐙</span>
+            <span class="skill-nome">GITHUB</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-icone">📦</span>
+            <span class="skill-nome">GIT</span>
+          </div>
+        </div>
+      </div>
+      <!-- ==================== SEÇÃO PROCESSO DE TRABALHO ==================== -->
+      <div class="processo-container">
+        <h2 class="processo-titulo">PROCESSO DE TRABALHO</h2>
+        <div class="processo-lista">
+          <div class="processo-item">
+            <div class="processo-numero">01</div>
+            <div class="processo-conteudo">
+              <span class="processo-icone">🎯</span>
+              <h3 class="processo-nome">DESCOBRIR</h3>
+              <p class="processo-descricao">Entendimento do problema e análise de requisitos.</p>
+            </div>
+          </div>
+          <div class="processo-item">
+            <div class="processo-numero">02</div>
+            <div class="processo-conteudo">
+              <span class="processo-icone">✏️</span>
+              <h3 class="processo-nome">DESENHAR</h3>
+              <p class="processo-descricao">Criação de wireframes e protótipos visuais.</p>
+            </div>
+          </div>
+          <div class="processo-item">
+            <div class="processo-numero">03</div>
+            <div class="processo-conteudo">
+              <span class="processo-icone">&lt;/&gt;</span>
+              <h3 class="processo-nome">DESENVOLVER</h3>
+              <p class="processo-descricao">Desenvolvimento e implementação do código.</p>
+            </div>
+          </div>
+          <div class="processo-item">
+            <div class="processo-numero">04</div>
+            <div class="processo-conteudo">
+              <span class="processo-icone">🚀</span>
+              <h3 class="processo-nome">IMPLANTAR</h3>
+              <p class="processo-descricao">Testes, revisão e entrega final do projeto.</p>
+            </div>
+          </div>
+          <div class="processo-item">
+            <div class="processo-numero">05</div>
+            <div class="processo-conteudo">
+              <span class="processo-icone">📊</span>
+              <h3 class="processo-nome">SUPORTE</h3>
+              <p class="processo-descricao">Manutenção, atualizações e melhoria contínua.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>VAMOS TRANSFORMAR SUAS IDEIAS EM REALIDADE</h2>
+    </section>
+    <!-- ==================== SEÇÃO CONTATOS==================== -->
+    <section id="contato" class="contato">
+      <h2 class="secao-titulo"> ENTRE EM CONTATO</h2>
+      <div class="contato-container">
+        <div class="contato-info">
+          <div class="contato-item">
+            <span class="contato-icone">📧</span>
+            <h3>Email</h3>
+            <p>flaviosantanarocha3@gmail.com</p>
+          </div>
+          <div class="contato-item">
+            <span class="contato-icone">📍</span>
+            <h3>Localização</h3>
+            <p>Brasil</p>
+          </div>
+          <div class="contato-redes">
+            <a href="https://github.com/flaviosantanarocha3-cyber" target="_blank" rel="noopener noreferrer"
+              class="rede-social-circular">
+              <img src="imagem/iconeGitHub.png" alt="GitHub" class="imagem-github">
+            </a>
+            <a href="https://www.linkedin.com/in/flavio-santana-rocha-a2219a414/?skipRedirect=true" target="_blank"
+              rel="noopener noreferrer" class="rede-social-circular">
+              <img src="imagem/iconeLinkedin.png" alt="LinkedIn" class="imagem-linkedin">
+            </a>
+          </div>
+        </div>
+
+        <form class="contato-formulario" action="https://formspree.io/f/xqeorgaw" method="POST">
+          <input type="text" name="Nome" placeholder="Nome" class="campo-form" required>
+          <textarea name="Mensagem" class="campo-form" placeholder="Digite sua mensagem" rows="5" required></textarea>
+          <button type="submit" class="botao-form">Enviar Mensagem</button>
+        </form>
+
+      </div>
+    </section>
   </main>
-  <!-- Início da seção sobre mim -->
-  <section id="sobre" class="sobre">
-    <h2 class="sobre-titulo">SOBRE MIM</h2>
-    <div class="sobre-caixa">
-      <p class="sobre-paragrafo">Olá, sou o Flávio Santana! Meu primeiro contato com a programação foi em 2007, em
-        Análise de Sistemas, mas segui carreira na área da Educação — uma experiência que moldou minha resiliência e
-        capacidade de aprendizado rápido. Hoje, retornei ao desenvolvimento de software com foco total. Busco aprender
-        diariamente e aplicar esse conhecimento na prática, pronto para evoluir e encarar novos desafios no mercado de
-        tecnologia.</p>
-    </div>
-  </section>
-  <!-- Início da seção habilidades -->
-  <section id="habilidades" class="habilidades">
-    <h2 class="habilidades-titulo">HABILIDADES</h2>
-    <div class="habilidades-caixa">
 
-      <div class="habilidades-card">
-        <img src="imagem/html.webp" alt="imagem-html" class="habilidades-imagem">
-        <div class="caixa-info-habilidades">
-          <h3 class="info-habilidades"></h3>
-        </div>
-      </div>
-
-      <div class="habilidades-card">
-        <img src="imagem/css.webp" alt="imagem-css" class="habilidades-imagem">
-        <div class="caixa-info-habilidades">
-          <h3 class="info-habilidades"></h3>
-        </div>
-      </div>
-
-      <div class="habilidades-card">
-        <img src="imagem/javascript.webp" alt="imagem-javascript" class="habilidades-imagem-javascript">
-        <div class="caixa-info-habilidades">
-          <h3 class="info-habilidades"></h3>
-        </div>
-      </div>
-
-      <div class="habilidades-card">
-        <img src="imagem/java.webp" alt="imagem-java" class="habilidades-imagem">
-        <div class="caixa-info-habilidades">
-          <h3 class="info-habilidades"></h3>
-        </div>
-      </div>
-
-      <div class="habilidades-card">
-        <img src="imagem/node.webp" alt="imagem-node" class="habilidades-imagem">
-        <div class="caixa-info-habilidades">
-          <h3 class="info-habilidades"></h3>
-        </div>
-      </div>
-
-      <div class="habilidades-card">
-        <img src="imagem/GitHub-Simbolo-comprimida.webp" alt="imagem-git-hub" class="habilidades-imagem">
-        <div class="caixa-info-habilidades">
-          <h3 class="info-habilidades"></h3>
-        </div>
-      </div>
-
-      <div class="habilidades-card">
-        <img src="imagem/imagem git.webp" alt="imagem-git" class="habilidades-imagem">
-        <div class="caixa-info-habilidades">
-          <h3 class="info-habilidades"></h3>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <!-- Início da seção projetos -->
-  <section id="projetos" class="projetos">
-    <h2 class="projetos-titulo">MEUS PROJETOS</h2>
-    <div class="projetos-caixa">
-      <img src="imagem/image.em breve-comprimida.webp" alt="Projeto 1" class="imagem-projeto">
-      <img src="imagem/image.em breve-comprimida.webp" alt="Projeto 2" class="imagem-projeto">
-      <img src="imagem/image.em breve-comprimida.webp" alt="Projeto 3" class="imagem-projeto">
-      <img src="imagem/image.em breve-comprimida.webp" alt="Projeto 4" class="imagem-projeto">
-      <img src="imagem/image.em breve-comprimida.webp" alt="Projeto 5" class="imagem-projeto">
-      <img src="imagem/image.em breve-comprimida.webp" alt="Projeto 6" class="imagem-projeto">
-    </div>
-  </section>
-  <!-- Início da seção de contatos -->
-  <section id="contato" class="contatos">
-    <h2 class="contatos-titulo">ENTRE EM CONTATO</h2>
-    <form class="formulario-contato" action="https://formspree.io/f/xqeorgaw" method="POST">
-      <div class="grupo-form">
-        <input type="text" name="Nome" placeholder="Nome" class="campo-form" required>
-      </div>
-      <div class="grupo-form">
-        <textarea name="Mensagem" class="campo-form" placeholder="Digite sua mensagem para Flavio Santana" rows="6"
-          required></textarea>
-      </div>
-      <button type="submit" class="botao-form">Enviar mensagem</button>
-    </form>
-  </section>
-
-  <!-- Início da seção footer -->
+  <!-- ==================== SEÇÃO RODAPE ==================== -->
   <footer class="rodape">
     <div class="rodape-conteudo">
-      <p>&copy; 2026 Flavio Santana.Todos os direitos reservados </p>
+      <p class="rodape-texto">&copy; 2026 Flavio Santana. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 
 </body>
 

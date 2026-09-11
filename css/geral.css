@@ -1,0 +1,37 @@
+
+/*******************************************************************************
+ * * 01. SEÇÃO: HOME / RESET
+ * *******************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+/* 1. Registrando a fonte */
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body {
+    background-color: var(--maisEscuro);
+    color: white;
+    line-height: 1.6;
+    
+}
+
+/*******************************************************************************
+ * * 01. SEÇÃO: HOME / CORES USADAS NO PROJETO
+ * *******************************************************************************/
+:root {
+    /* --- PALETA NEUTRA (CINZAS) --- */
+    --primaria: #4a4a4a;
+    --secundaria: #333333;
+    --escuro: #1a1a1a;
+    --maisEscuro: #0d0d0d;
+    --claro: #e0e0e0;
+    --vidro: rgba(255, 255, 255, 0.20);
+}
+

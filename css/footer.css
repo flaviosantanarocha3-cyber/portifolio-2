@@ -1,0 +1,27 @@
+
+/*******************************************************************************
+ * * 12. SEÇÃO: FOOTER
+ * *******************************************************************************/
+.rodape {
+    background-color: var(--maisEscuro);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.rodape-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rodape-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+.rodape-texto {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+

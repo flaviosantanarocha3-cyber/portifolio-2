@@ -1,0 +1,62 @@
+
+/*******************************************************************************
+ * * 02. SEÇÃO: MENU
+ * *******************************************************************************/
+.menu {
+    background-color: rgba(34, 41, 58, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+
+}
+
+.menu-lista {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-lista li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu-lista li a:hover {
+    color: #5a5a5a;
+}
+
+.botao-hamburguer {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.linha-barra {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+#container{
+
+    position: relative;
+    width: 100%;
+
+}

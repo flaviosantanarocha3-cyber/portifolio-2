@@ -1,8 +1,6 @@
 
 # 💻 Meu Portfólio Pessoal
 
-# 💻 Meu Portfólio Pessoal
-
 Este é o repositório do meu **portfólio pessoal**, desenvolvido para apresentar meus principais projetos, habilidades e informações de contato de forma clara, moderna e totalmente responsiva.
 
 O projeto foi desenvolvido com foco em **performance, responsividade, interatividade e experiência do usuário**, utilizando tecnologias modernas do desenvolvimento Front-end.
@@ -40,14 +38,17 @@ O portfólio também funciona como um espaço para apresentar projetos desenvolv
 portfolio/
 │
 ├── index.html
+├── script.js
+│
 ├── css/
-│   ├── style.css
-│   └── responsivo.css
+│   ├── geral.css
+│   ├── header.css
+│   ├── sections.css
+│   ├── footer.css
+│   └── responsive.css
 │
-├── js/
-│   └── script.js
-│
-└── imagens/
+├── imagem/
+└── fontes/
 ```
 
 ## 🌐 Tecnologias em Destaque

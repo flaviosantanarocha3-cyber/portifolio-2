@@ -88,7 +88,18 @@
                        text-align: justify;
                    }
 
+                   .cta h2 {
+                       font-size: 2rem;
+                       letter-spacing: -1px;
+                       line-height: 1.2;
+                   }
+
                    /* Habilidades */
+                   .skills-titulo {
+                       font-size: 1.5rem;
+                       text-align: center;
+                   }
+
                    .skills-lista {
                        flex-wrap: wrap;
                        justify-content: center;
@@ -124,6 +135,22 @@
                    .menu-lista {
                        flex-direction: column;
                        align-items: end;
+                   }
+
+                   .skills-titulo {
+                       font-size: 1.1rem;
+                       text-align: center;
+                       letter-spacing: 0.3px;
+                   }
+
+                   .skill-nome {
+                       font-size: 0.75rem;
+                   }
+
+                   .cta h2 {
+                       font-size: 1.8rem;
+                       letter-spacing: -0.5px;
+                       line-height: 1.3;
                    }
 
                    .projetos-grid,
@@ -205,9 +232,15 @@
                    }
 
                    .skills-titulo {
+                       font-size: 1.2rem;
+                       text-align: center;
+                       letter-spacing: 0.5px;
+                       word-wrap: break-word;
+                       line-height: 1.3;
+                   }
 
-                       font-size: 2rem;
-
+                   .skill-nome {
+                       font-size: 0.8rem;
                    }
 
                    .projetos-grid {
@@ -239,12 +272,11 @@
                        font-size: 0.95rem;
                    }
 
-                   .cta-titulo {
-
-                       gap: 2rem;
-                       font-size: 1rem;
-                       padding: 1rem;
-
+                   .cta h2 {
+                       font-size: 1.5rem;
+                       letter-spacing: -1px;
+                       line-height: 1.2;
+                       padding: 0 1rem;
                    }
 
                    .rodape-texto {

@@ -471,6 +471,10 @@ h2 {
     color: #FFFFFF;
 }
 
+.cta h2 {
+
+    font-size: 3rem;
+}
 .cta-titulo {
     font-size: 2.5rem;
     font-weight: 700;

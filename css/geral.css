@@ -11,7 +11,7 @@
 }
 /* 1. Registrando a fonte */
 html {
-    scroll-behavior: smooth;
+    /* scroll suave é feito via jQuery (script.js) */
     font-size: 100%;
 }
 

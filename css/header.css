@@ -1,77 +1,164 @@
-
-/*******************************************************************************
- * * 02. SEÇÃO: MENU
- * *******************************************************************************/
+/* ==========================================================================
+   02. CABEÇALHO / MENU
+   ========================================================================== */
 .menu {
-    
-    background-color: rgba(34, 41, 58, 0.08);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    
-    
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  height: var(--altura-menu);
+  /* Fundo quase opaco: mantém o menu legível sobre o conteúdo sem
+     "aprisionar" os elementos fixos do painel mobile (o backdrop-filter
+     criaria um containing block para descendentes com position: fixed). */
+  background-color: rgba(13, 13, 13, 0.9);
+  border-bottom: var(--borda-suave);
+  transition:
+    background-color var(--transicao),
+    box-shadow var(--transicao),
+    height var(--transicao);
 }
 
+/* Estado após rolar a página: menu mais compacto e com sombra */
+.menu.menu-rolado {
+  background-color: rgba(13, 13, 13, 0.96);
+  box-shadow: 0 12px 30px -18px rgba(0, 0, 0, 0.9);
+  border-bottom: var(--borda);
+}
+
+/* Logotipo */
+.menu-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-family: var(--fonte-display);
+  font-size: 1.35rem;
+  letter-spacing: 1px;
+  color: var(--texto);
+  transition: color var(--transicao);
+}
+
+.menu-logo:hover {
+  color: var(--acento-claro);
+}
+
+.menu-logo-destaque {
+  color: var(--acento);
+}
+
+/* Lista de navegação */
 .menu-lista {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    
-    
-    
-    
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-.menu-lista li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
- 
+.menu-link {
+  position: relative;
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  padding: 0.4rem 0;
+  transition: color var(--transicao);
 }
 
-.menu-lista li a:hover {
-    color: #5a5a5a;
+.menu-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1.5px;
+  background: var(--acento);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transicao);
 }
 
+.menu-link:hover {
+  color: #fff;
+}
+
+.menu-link:hover::after,
+.menu-link.ativo::after {
+  transform: scaleX(1);
+}
+
+.menu-link.ativo {
+  color: #fff;
+}
+
+/* Item "Entre em Contato" em destaque */
+.menu-link-botao {
+  color: #fff;
+  padding: 0.55rem 1.25rem;
+  border: var(--borda);
+  border-radius: var(--raio-pilula);
+  background: rgba(255, 255, 255, 0.04);
+  transition:
+    background-color var(--transicao),
+    border-color var(--transicao),
+    transform var(--transicao);
+}
+
+.menu-link-botao::after {
+  display: none;
+}
+
+.menu-link-botao:hover {
+  background: var(--acento);
+  border-color: var(--acento);
+  transform: translateY(-1px);
+}
+
+/* Botão hambúrguer (mobile) */
 .botao-hamburguer {
-    display: none;
-    flex-direction: column;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    
-    
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 12px;
+  border: var(--borda);
+  background: rgba(255, 255, 255, 0.04);
+  transition: background-color var(--transicao);
+}
+
+.botao-hamburguer:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .linha-barra {
-    width: 25px;
-    height: 3px;
-    background-color: #FFFFFF;
-    margin: 3px 0;
-    transition: 0.3s;
-    
-    
-    
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: transform var(--transicao), opacity var(--transicao);
 }
 
-#container{
+/* Transformação do hambúrguer em "X" quando o menu está aberto */
+.menu.menu-aberto .linha-barra:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
 
-    position: relative;
-    width: 100%;
-    
+.menu.menu-aberto .linha-barra:nth-child(2) {
+  opacity: 0;
+}
 
+.menu.menu-aberto .linha-barra:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+#container {
+  position: relative;
+  width: 100%;
 }

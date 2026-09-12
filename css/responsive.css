@@ -1,312 +1,202 @@
-               /* ==========================================================================
-   RESPONSIVIDADE (MEDIA QUERIES)
-
+/* ==========================================================================
+   05. RESPONSIVIDADE (MEDIA QUERIES)
    ========================================================================== */
-               /* Tablet */
-               /* Tablet e Celulares (< 768px) */
-               @media (max-width: 768px) {
 
-                   /* 1. Registrando a fonte */
-                   html {
-
-                       font-size: 90%;
-                   }
-
-                   .menu-lista {
-
-
-                       position: fixed;
-
-                       top: 70px;
-                       right: -250px;
-
-                       width: 220px;
-                       height: auto;
-
-                       padding: 2rem 1rem;
-
-
-                       backdrop-filter: blur(10px);
-                       border: 1px solid rgba(255, 255, 255, 0.1);
-
-                       border-radius: 16px;
-
-                       display: flex;
-                       flex-direction: column;
-                       justify-content: flex-start;
-                       align-items: center;
-                       gap: 1.5rem;
-
-                       transition: right 0.4s ease;
-
-                       z-index: 1000;
-                   }
-
-                   .menu.ativo .menu-lista {
-                       right: 0;
-                   }
-
-                   menu-lista {
-                       z-index: 1;
-                   }
-
-                   .botao-hamburguer {
-                       position: fixed;
-                       top: 20px;
-                       right: 20px;
-                       z-index: 1100;
-                   }
-
-                   /* Navegação */
-
-                   /* Hero */
-                   .hero {
-                       grid-template-columns: 1fr;
-                       /* 1 coluna fica melhor no mobile */
-                       text-align: center;
-                       gap: 2rem;
-                   }
-
-                   .hero-titulo-roxo,
-                   .hero-titulo-branco {
-                       font-size: clamp(1.8rem, 5vw, 2.2rem);
-                       /* Adapta suavemente */
-                   }
-
-                   .hero-imagem {
-                       width: 150px;
-                       height: 150px;
-                       margin: 0 auto;
-                       object-fit: cover;
-                       border-radius: 50%;
-
-                   }
-
-                   /* Seções genéricas */
-                   .secao-titulo {
-                       font-size: 1.75rem;
-                       text-align: justify;
-                   }
-
-                   .cta h2 {
-                       font-size: 2rem;
-                       letter-spacing: -1px;
-                       line-height: 1.2;
-                   }
-
-                   /* Habilidades */
-                   .skills-titulo {
-
-                       font-size: 1.5rem;
-                       text-align: center;
-                   }
-
-                   .skills-lista {
-                       flex-wrap: wrap;
-                       justify-content: center;
-                       gap: 0.75rem;
-                   }
-
-                   /* Grids responsivos */
-                   .projetos-grid,
-                   .processo-lista {
-                       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-                       gap: 1.5rem;
-                   }
-
-                   /* Contato */
-                   .contato-container {
-                       grid-template-columns: 1fr;
-                       gap: 1.5rem;
-                   }
-               }
-
-
-               /* Celulares Menores (< 480px) */
-               @media (max-width: 480px) {
-
-                   /* 1. Registrando a fonte */
-                   html {
-
-                       font-size: 90%;
-                   }
-
-                   .menu-lista {
-                       flex-direction: column;
-                       align-items: end;
-                   }
-
-                   .skills-titulo {
-                       font-size: 1.2rem;
-                       text-align: center;
-                       letter-spacing: 0.3px;
-                   }
-
-                   .skill-nome {
-                       font-size: 0.75rem;
-                   }
-
-                   .cta h2 {
-                       font-size: 1.8rem;
-                       letter-spacing: -0.5px;
-                       line-height: 1.3;
-                   }
-
-                   .projetos-grid,
-                   .processo-lista {
-                       grid-template-columns: 1fr;
-                   }
-
-               }
-
-               /* Celular */
-               @media (max-width: 490px) {
-
-                   /* 1. Registrando a fonte */
-                   html {
-
-                       font-size: 85%;
-                   }
-
-                   .menu {
-                       padding: 1rem;
-
-                   }
-
-                   .menu-logo {
-                       font-size: 1.2rem;
-                   }
-
-                   .menu-lista {
-                       display: none;
-                       position: absolute;
-                       top: 100%;
-                       left: 0;
-                       right: 0;
-                       flex-direction: column;
-                       align-items: start;
-                       padding: 1rem;
-                       gap: 1rem;
-                   }
-
-                   .menu-lista.active {
-                       display: flex;
-                   }
-
-                   .botao-hamburguer {
-                       display: flex;
-                   }
-
-                   .secao-hero {
-                       padding: 5rem 1rem 2rem;
-                   }
-
-                   .hero-container {
-                       flex-direction: column;
-                       gap: 2rem;
-                   }
-
-                   .hero-titulo-roxo,
-                   .hero-titulo-branco {
-                       font-size: 4rem;
-                   }
-
-                   .hero-descricao {
-                       font-size: 1rem;
-                   }
-
-                   .hero-imagem {
-                       width: 90%;
-                   }
-
-                   .hero-imagem-container {
-                       width: 200px;
-                       height: 200px;
-                   }
-
-
-                   .sobre {
-                       text-align: left;
-                       justify-content: center;
-
-                   }
-
-                   .secao-titulo {
-
-                    font-size: 3rem;
-
-
-                   }
-
-                   
-
-                   .skills-lista {
-                       flex-wrap: wrap;
-                       gap: 1rem;
-                   }
-
-                   .skills-titulo {
-                       font-size: 1.8rem;
-                       text-align: center;
-                       justify-content: center;
-                       letter-spacing: 0.5px;
-                       word-wrap: break-word;
-                       line-height: 1.3;
-                   }
-
-                   .skill-nome {
-                       font-size: 0.8rem;
-                   }
-
-                   .projetos-grid {
-                       grid-template-columns: 1fr;
-                   }
-
-                   .projetos-titulo h2 {
-
-                      
-                       text-align: le;
-                       justify-content: space-between;
-                   }
-
-                   .processo-lista {
-                       grid-template-columns: 1fr;
-                   }
-
-                   .secao-titulo {
-                       font-size: 1.8rem;
-                   }
-
-                   .contato-container {
-                       grid-template-columns: 1fr;
-                       gap: 2rem;
-                   }
-
-                   .campo-form {
-                       padding: 0.8rem;
-                   }
-
-                   .sobre-caixa {
-                       padding: 2rem 1rem;
-                   }
-
-                   .contato-redes {
-
-                    justify-content: center;
-                   }
-
-                   .sobre-paragrafo {
-                       font-size: 0.95rem;
-                   }
-
-                   .cta h2 {
-                       font-size: 1.5rem;
-                       letter-spacing: -1px;
-                       line-height: 1.2;
-                       padding: 0 1rem;
-                   }
-
-                   .rodape-texto {
-                       font-size: 0.9rem;
-                   }
-               }
+/* --------------------------------------------------------------------------
+   05.1 Notebooks / telas médias (até 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-container {
+    gap: 2.5rem;
+  }
+
+  .sobre-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .sobre-destaques {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destaque-card-foco {
+    grid-column: 1 / -1;
+  }
+
+  .projetos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .processo-lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contato-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   05.2 Tablets (até 768px) — menu mobile em painel lateral
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --altura-menu: 64px;
+  }
+
+  .menu {
+    padding: 0 1.25rem;
+  }
+
+  .botao-hamburguer {
+    display: flex;
+    position: relative;
+    z-index: 1100;
+  }
+
+  /* Camada de navegação (overlay + painel) */
+  .menu-navegacao {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .menu-navegacao::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .menu-lista {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: min(320px, 84vw);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.1rem;
+    padding: calc(var(--altura-menu) + 1.25rem) 2rem 2.5rem;
+    background: rgba(18, 18, 18, 0.92);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-left: var(--borda);
+    border-radius: 24px 0 0 24px;
+    box-shadow: var(--sombra-flutuante);
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .menu.menu-aberto .menu-navegacao {
+    pointer-events: auto;
+  }
+
+  .menu.menu-aberto .menu-navegacao::before {
+    opacity: 1;
+  }
+
+  .menu.menu-aberto .menu-lista {
+    transform: translateX(0);
+  }
+
+  .menu-link {
+    width: 100%;
+    font-size: 1.15rem;
+    padding: 0.5rem 0;
+  }
+
+  .menu-link-botao {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  /* Hero empilhado */
+  .secao-hero {
+    padding: calc(var(--altura-menu) + 2.5rem) 1.5rem 5rem;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .hero-esquerda {
+    align-items: center;
+  }
+
+  .hero-subdescricao {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-acoes {
+    justify-content: center;
+  }
+
+  .hero-imagem-container {
+    width: min(100%, 320px);
+  }
+
+  .hero-rolar {
+    display: none;
+  }
+
+  .processo-lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-lista {
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   05.3 Celulares (até 560px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 560px) {
+  .sobre-destaques {
+    grid-template-columns: 1fr;
+  }
+
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-capa {
+    height: 190px;
+  }
+
+  .processo-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-item {
+    min-width: 0;
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+
+  .contato-formulario {
+    padding: 1.5rem;
+  }
+
+  .botao-topo {
+    right: 1.1rem;
+    bottom: 1.1rem;
+  }
+
+  .secao-etiqueta {
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+  }
+}

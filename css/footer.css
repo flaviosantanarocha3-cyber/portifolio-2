@@ -1,27 +1,105 @@
-
-/*******************************************************************************
- * * 12. SEÇÃO: FOOTER
- * *******************************************************************************/
+/* ==========================================================================
+   04. RODAPÉ E BOTÃO VOLTAR AO TOPO
+   ========================================================================== */
 .rodape {
-    background-color: var(--maisEscuro);
-    padding: 3rem 2rem;
-    text-align: center;
+  background-color: var(--maisEscuro);
+  border-top: var(--borda-suave);
+  padding: 3.5rem 2rem 2.5rem;
+  text-align: center;
 }
 
 .rodape-conteudo {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: var(--largura-conteudo);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
 }
 
 .rodape-logo {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #FFFFFF;
-    margin-bottom: 1rem;
+  font-family: var(--fonte-display);
+  font-size: 1.7rem;
+  letter-spacing: 1.5px;
+  color: var(--texto);
+  transition: color var(--transicao);
+}
+
+.rodape-logo span {
+  color: var(--acento);
+}
+
+.rodape-logo:hover {
+  color: var(--acento-claro);
+}
+
+.rodape-navegacao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+.rodape-navegacao a {
+  font-size: 0.9rem;
+  color: var(--texto-fraco);
+  transition: color var(--transicao);
+}
+
+.rodape-navegacao a:hover {
+  color: #fff;
 }
 
 .rodape-texto {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  color: var(--texto-fraco);
 }
 
+.rodape-assinatura {
+  font-size: 0.78rem;
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.32);
+}
+
+/* --------------------------------------------------------------------------
+   04.1 Botão voltar ao topo
+   -------------------------------------------------------------------------- */
+.botao-topo {
+  position: fixed;
+  right: 1.75rem;
+  bottom: 1.75rem;
+  z-index: 900;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: var(--borda);
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--texto);
+  box-shadow: var(--sombra-card);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  transition:
+    opacity var(--transicao),
+    visibility var(--transicao),
+    transform var(--transicao),
+    border-color var(--transicao),
+    background-color var(--transicao);
+}
+
+.botao-topo.visivel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.botao-topo:hover {
+  border-color: rgba(138, 123, 255, 0.5);
+  background: var(--acento);
+  color: #fff;
+}

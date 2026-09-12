@@ -97,7 +97,7 @@ if (typeof ScrollReveal !== 'undefined') {
         duration: 1500,
         easing: 'ease-in-out',
         delay: 200,
-        opacity: 0.2,
+        opacity: 0.8,
         reset: false
     });
 

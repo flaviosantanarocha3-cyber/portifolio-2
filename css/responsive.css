@@ -14,7 +14,7 @@
 
                    .menu-lista {
 
-                    
+
                        position: fixed;
 
                        top: 70px;
@@ -25,10 +25,11 @@
 
                        padding: 2rem 1rem;
 
-                       background: rgba(34, 41, 58, 0.85);
-                       backdrop-filter: blur(10px);
 
-                       border-radius: 15px 0 0 15px;
+                       backdrop-filter: blur(10px);
+                       border: 1px solid rgba(255, 255, 255, 0.1);
+
+                       border-radius: 16px;
 
                        display: flex;
                        flex-direction: column;
@@ -58,7 +59,6 @@
 
                    /* Navegação */
 
-
                    /* Hero */
                    .hero {
                        grid-template-columns: 1fr;
@@ -79,7 +79,7 @@
                        margin: 0 auto;
                        object-fit: cover;
                        border-radius: 50%;
-                       
+
                    }
 
                    /* Seções genéricas */
@@ -96,6 +96,7 @@
 
                    /* Habilidades */
                    .skills-titulo {
+
                        font-size: 1.5rem;
                        text-align: center;
                    }
@@ -112,8 +113,6 @@
                        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
                        gap: 1.5rem;
                    }
-
-
 
                    /* Contato */
                    .contato-container {
@@ -138,7 +137,7 @@
                    }
 
                    .skills-titulo {
-                       font-size: 1.1rem;
+                       font-size: 1.2rem;
                        text-align: center;
                        letter-spacing: 0.3px;
                    }
@@ -166,12 +165,12 @@
                    /* 1. Registrando a fonte */
                    html {
 
-                       font-size: 80%;
+                       font-size: 85%;
                    }
 
                    .menu {
                        padding: 1rem;
-                       
+
                    }
 
                    .menu-logo {
@@ -185,7 +184,7 @@
                        left: 0;
                        right: 0;
                        flex-direction: column;
-                       align-items:start;
+                       align-items: start;
                        padding: 1rem;
                        gap: 1rem;
                    }
@@ -226,14 +225,30 @@
                    }
 
 
+                   .sobre {
+                       text-align: left;
+                       justify-content: center;
+
+                   }
+
+                   .secao-titulo {
+
+                    font-size: 3rem;
+
+
+                   }
+
+                   
+
                    .skills-lista {
                        flex-wrap: wrap;
                        gap: 1rem;
                    }
 
                    .skills-titulo {
-                       font-size: 1.2rem;
+                       font-size: 1.8rem;
                        text-align: center;
+                       justify-content: center;
                        letter-spacing: 0.5px;
                        word-wrap: break-word;
                        line-height: 1.3;
@@ -245,6 +260,13 @@
 
                    .projetos-grid {
                        grid-template-columns: 1fr;
+                   }
+
+                   .projetos-titulo h2 {
+
+                      
+                       text-align: le;
+                       justify-content: space-between;
                    }
 
                    .processo-lista {
@@ -266,6 +288,11 @@
 
                    .sobre-caixa {
                        padding: 2rem 1rem;
+                   }
+
+                   .contato-redes {
+
+                    justify-content: center;
                    }
 
                    .sobre-paragrafo {

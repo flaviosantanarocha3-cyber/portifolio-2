@@ -7,18 +7,20 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-
+    
 }
 /* 1. Registrando a fonte */
 html {
-    /* scroll suave é feito via jQuery (script.js) */
-    font-size: 100%;
+   
+    font-size: 102%;
 }
 
 body {
     background-color: var(--maisEscuro);
+    
     color: white;
     line-height: 1.6;
+    
     
 }
 

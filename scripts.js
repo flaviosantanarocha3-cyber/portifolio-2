@@ -62,7 +62,6 @@
 
 (function () {
 
-<<<<<<< HEAD
     // funcao  scroll 
     function ativarScroll() {
         let links = document.querySelectorAll('a[href^="#"]');
@@ -73,7 +72,6 @@
             (window.jQuery ? 'jQuery ' + jQuery.fn.jquery : 'fallback nativo') + ')');
     }
 
-=======
     var DURACAO_SCROLL = 800; // duração da animação em ms
 
     // altura do menu fixo no topo
@@ -141,7 +139,6 @@
         document.addEventListener('DOMContentLoaded', ativarScroll);
     }
 
-<<<<<<< HEAD
 
 })();
 
@@ -183,7 +180,7 @@ sr.reveal('.secao-tecnologias-processo', {
 
 // 4. Projetos: Desliza da direita para a esquerda com leve rotação 3D
 sr.reveal('.secao-projetos', {
-    origin: 'bottom',
+    origin: 'left',
     distance: '15%',
     duration: 2000,
     easing: 'ease-in-out',
